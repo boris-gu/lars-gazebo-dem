@@ -1,6 +1,6 @@
-<?xml version='1.0' ?>
-<sdf version='1.5'>
-  <model name='iris_lars_dem'>
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="iris_lars_dem">
     <include>
       <uri>model://iris</uri>
     </include>

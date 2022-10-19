@@ -23,7 +23,7 @@
       <elevation>1000</elevation>
     </spherical_coordinates>
 
-    <physics name='default_physics' default='0' type='ode'>
+    <physics name="default_physics" default="0" type="ode">
       <gravity>0 0 -9.8066</gravity>
       <ode>
         <solver>
