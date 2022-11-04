@@ -1,0 +1,4 @@
+lars_gazebo_dem_ws/build
+lars_gazebo_dem_ws/devel
+lars_gazebo_dem_ws/logs
+__pycache__/

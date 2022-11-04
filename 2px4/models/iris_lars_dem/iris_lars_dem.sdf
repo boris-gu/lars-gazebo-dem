@@ -5,7 +5,7 @@
       <uri>model://iris</uri>
     </include>
 
-    <include>
+    <!-- <include>
       <uri>model://fpv_cam_lars_dem</uri>
       <pose>0.02 0 -0.045 0 1.5707 0</pose>
     </include>
@@ -19,7 +19,7 @@
           <lower>0</lower>
         </limit>
       </axis>
-    </joint>
+    </joint> -->
 
     <include>
       <uri>model://rplidar_lars_dem</uri>

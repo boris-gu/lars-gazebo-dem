@@ -52,7 +52,7 @@
         <!-- <plugin name="laser" filename="libGpuRayPlugin.so" /> -->
         <plugin name="gazebo_ros_head_rplidar_controller" filename="libgazebo_ros_laser.so">
         <!-- <plugin name="gazebo_ros_head_rplidar_controller" filename="libgazebo_ros_gpu_laser.so"> -->
-          <topicName>laser_scan</topicName>
+          <topicName>laser_ls</topicName>
           <frameName>laser_frame</frameName>
         </plugin>
 

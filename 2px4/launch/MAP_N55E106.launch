@@ -51,5 +51,6 @@
     <arg name="fcu_url" value="$(arg fcu_url)"/>
     <arg name="respawn_mavros" value="$(arg respawn_mavros)"/>
   </include>
-  <node pkg="tf" type="static_transform_publisher" name="laser_tf" args="0 0 0 0 0 0 laser_frame laser_frame_fixed 10"/>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="laser_tf" args="0 0 -0.045 0 1.5707 0 base_link laser_frame"/>
+  <node pkg="lars_gazebo_dem" type="ls2pc2.py" name="ls2pc2" args="0 0 -0.045 0 1.5707 0 base_link laser_frame"/>
 </launch>
