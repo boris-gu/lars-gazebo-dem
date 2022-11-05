@@ -26,7 +26,7 @@
     catkin build
     ```
 * Для корректной работы лидара необходимо настроить преобразование фреймов __map->base_link__.  
-    В файле __px4_config.yaml__ (скорее всего будет лежать по пути `/opt/ros/noetic/share/mavros/launch/`) измените `send` на `true` в следующем куске кода:
+    В файле __px4_config.yaml__ (скорее всего будет лежать по пути `/opt/ros/noetic/share/mavros/launch/`) установите `send` на `true` в следующем куске кода:
     ```yaml
     # local_position
     local_position:
