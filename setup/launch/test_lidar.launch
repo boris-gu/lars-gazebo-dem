@@ -11,7 +11,7 @@
     <arg name="Y" default="0"/>
     <!-- vehicle model and world -->
     <arg name="est" default="ekf2"/>
-    <arg name="vehicle" default="iris_lars_dem"/>
+    <arg name="vehicle" default="iris_lidar_lars_dem"/>
     <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/test_lidar.world"/>
     <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf"/>
 

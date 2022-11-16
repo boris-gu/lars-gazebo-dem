@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# @name Iris LARS DEM
+#
+# @type Quadrotor Wide
+#
+# @maintainer Julian Oes <julian@oes.ch>
+#
+
+. ${R}etc/init.d/rc.mc_defaults
+
+set MIXER quad_w

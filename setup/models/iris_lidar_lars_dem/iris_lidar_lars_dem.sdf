@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
-  <model name="iris_lars_dem">
+  <model name="iris_lirar_lars_dem">
     <include>
-      <uri>model://iris</uri>
+      <uri>model://iris_lars_dem</uri>
     </include>
 
     <!-- <include>
@@ -11,7 +11,7 @@
     </include>
     <joint name="fpv_cam_joint" type="fixed">
       <child>fpv_cam_lars_dem::link</child>
-      <parent>iris::base_link</parent>
+      <parent>iris_lars_dem::base_link</parent>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -27,7 +27,7 @@
     </include>
     <joint name="rplidar_joint" type="revolute">
       <child>rplidar_lars_dem::link</child>
-      <parent>iris::base_link</parent>
+      <parent>iris_lars_dem::base_link</parent>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>

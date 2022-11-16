@@ -3,16 +3,16 @@
   <!-- MAVROS posix SITL environment launch script -->
   <!-- launches MAVROS, PX4 SITL, Gazebo environment, and spawns vehicle -->
   <!-- vehicle pose -->
-  <arg name="x" default="1764.940558"/>
-  <arg name="y" default="-1300.271039"/>
-  <arg name="z" default="-57.065823"/>
+  <arg name="x" default="-100.443978"/>
+  <arg name="y" default="72.800370"/>
+  <arg name="z" default="53.354150"/>
   <arg name="R" default="0"/>
   <arg name="P" default="0"/>
   <arg name="Y" default="0"/>
   <!-- vehicle model and world -->
   <arg name="est" default="ekf2"/>
-  <arg name="vehicle" default="iris_lars_dem"/>
-  <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/MAP_N56E110.world"/>
+  <arg name="vehicle" default="iris_lidar_lars_dem"/>
+  <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/MAP_N55E106.world"/>
   <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf"/>
 
   <!-- gazebo configs -->

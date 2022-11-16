@@ -38,7 +38,7 @@
         send_fcu: false
     ```
 * При первом запуске симуляции необходимо настроить следующие параметры через QGroundControl:  
-    __MPC_XY_VEL_MAX__ = 2 м/с - ограничить скорость дрона для более плотного сканирования лидаром  
+    __MPC_XY_VEL_MAX__ = 1 м/с - ограничить скорость дрона для более плотного сканирования лидаром  
     __COM_RCL_EXCEPT__ = 4 - Offboard
 
 
@@ -59,7 +59,7 @@ roslaunch px4 MAP_N55E106.launch
 ```
 Если необходимо запустить дрон в пустом мире, воспользуйтесь командой:
 ```bash
-roslaunch px4 mavros_posix_sitl.launch vehicle:=iris_lars_dem
+roslaunch px4 mavros_posix_sitl.launch vehicle:=iris_lidar_lars_dem
 # Запустите в отдельном терминале для возможности просматривать данные с лидара
 tf2_ros static_transform_publisher 0 0 -0.045 0 1.5707 0 base_link laser_frame
 # Запустите в отдельном терминале для конвертирования данных LaserScan -> PointCloud2
