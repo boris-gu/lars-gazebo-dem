@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Not used in the agm-ms3 branch
 
 import rospy
 from sensor_msgs.msg import PointCloud2, LaserScan

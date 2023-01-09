@@ -13,6 +13,10 @@
 * pcl-tools - для работы с файлами .pcd
 
 ## Подготовка
+* Установите плагин, симулирующий работу многолучевого лидара, и публикующий с него данные:
+    ```bash
+    sudo apt install ros-noetic-velodyne-gazebo-plugins
+    ```
 * Так как PX4-Autopilot быстро развивается, за основу взята стабильная версия 1.13.1.  
     Клонировать:  
     ```bash
@@ -62,9 +66,6 @@ roslaunch px4 MAP_N55E106.launch
 roslaunch px4 mavros_posix_sitl.launch vehicle:=iris_lidar_lars_dem
 # Запустите в отдельном терминале для возможности просматривать данные с лидара
 tf2_ros static_transform_publisher 0 0 -0.045 0 1.5707 0 base_link laser_frame
-# Запустите в отдельном терминале для конвертирования данных LaserScan -> PointCloud2
-source <PATH_TO_THIS_REP>/lars_gazebo_dem_ws/devel/setup.bash
-rosrun lars_gazebo_dem ls2pc2.py
 ```
 
 ## Данные с дрона
