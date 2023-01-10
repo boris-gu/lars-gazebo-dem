@@ -23,7 +23,7 @@
     git clone --recurse-submodules --branch v1.13.1 https://github.com/PX4/PX4-Autopilot.git
     ```
 
-    Добавьте модель, запустив `<PATH_TO_THIS_REP>/2px4/setup.sh <PATH_TO_PX4>`. Этот скрипт внесет все необходимые изменения в PX4-Autopilot.
+    Добавьте модель, запустив `<PATH_TO_THIS_REP>/setup/setup.sh <PATH_TO_PX4>`. Этот скрипт внесет все необходимые изменения в PX4-Autopilot.
 * Соберите пакет __lars_gazebo_dem__
     ```bash
     cd <PATH_TO_THIS_REP>/lars_gazebo_dem_ws
@@ -51,7 +51,7 @@
 cd <PX4-Autopilot_clone>
 DONT_RUN=1 make px4_sitl_default gazebo
 source ~/catkin_ws/devel/setup.bash    # (optional)
-source <PATH_TO_THIS_REP>/lars_gazebo_dem_ws/devel/setup.bash # LaserScan -> PointCloud2
+source <PATH_TO_THIS_REP>/lars_gazebo_dem_ws/devel/setup.bash # Изменение фрейма данных с лидара
 source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default && \
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd) && \
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo
@@ -64,8 +64,12 @@ roslaunch px4 MAP_N55E106.launch
 Если необходимо запустить дрон в пустом мире, воспользуйтесь командой:
 ```bash
 roslaunch px4 mavros_posix_sitl.launch vehicle:=iris_lidar_lars_dem
-# Запустите в отдельном терминале для возможности просматривать данные с лидара
-tf2_ros static_transform_publisher 0 0 -0.045 0 1.5707 0 base_link laser_frame
+# Для возможности просматривать данные с лидара
+# Запустите в отдельном терминале
+rosrun tf2_ros static_transform_publisher 0 0 -0.045 0 1.5707 0 base_link laser_frame
+# Запустите в отдельном терминале
+source <PATH_TO_THIS_REP>/lars_gazebo_dem_ws/devel/setup.bash
+rosrun lars_gazebo_dem pc2_change_frame.py
 ```
 
 ## Данные с дрона
@@ -88,6 +92,7 @@ rosrun pcl_ros pointcloud_to_pcd input:=/laser_pc2
 pcl_concatenate_points_pcd *.pcd
 # Посмотреть результат
 pcl_viewer ./output.pcd
+# 0-9 - изменить цветовую идентификацию точек
 ```
 
 

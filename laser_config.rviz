@@ -91,7 +91,7 @@ Visualization Manager:
       Selectable: true
       Size (Pixels): 3
       Size (m): 0.10000000149011612
-      Style: Flat Squares
+      Style: Points
       Topic: /laser_pc2
       Unreliable: false
       Use Fixed Frame: true
@@ -161,5 +161,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1920
-  X: 0
+  X: 1920
   Y: 32

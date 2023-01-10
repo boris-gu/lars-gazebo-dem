@@ -31,9 +31,9 @@
         https://bitbucket.org/DataspeedInc/velodyne_simulator/src/master/
         -->
       <!-- GPU - visual, notGPU - collision -->
-      <!-- GPU ray is not working -->
+      <!-- GPU is running slower for some reason -->
+      <!-- <sensor name="laser" type="gpu_ray"> -->
       <sensor name="laser" type="ray">
-        <!-- <sensor name="laser" type="gpu_ray"> -->
         <ray>
           <scan>
             <horizontal>
@@ -61,10 +61,9 @@
           </noise>
         </ray>
 
-        <plugin name="laser" filename="libRayPlugin.so" />
         <plugin name="gazebo_ros_head_rplidar_controller" filename="libgazebo_ros_velodyne_laser.so">
-          <!-- <plugin name="gazebo_ros_head_rplidar_controller" filename="libgazebo_ros_gpu_laser.so"> -->
-          <topicName>laser_pc2</topicName>
+        <!-- <plugin name="gazebo_ros_head_rplidar_controller" filename="libgazebo_ros_velodyne_gpu_laser.so"> -->
+          <topicName>laser_pc2_raw</topicName>
           <frameName>laser_frame</frameName>
         </plugin>
 

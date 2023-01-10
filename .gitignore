@@ -1,4 +1,5 @@
 lars_gazebo_dem_ws/build
 lars_gazebo_dem_ws/devel
 lars_gazebo_dem_ws/logs
+lars_gazebo_dem_ws/.catkin_tools
 __pycache__/
