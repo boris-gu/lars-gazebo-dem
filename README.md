@@ -19,7 +19,7 @@
     git clone --recurse-submodules --branch v1.13.1 https://github.com/PX4/PX4-Autopilot.git
     ```
 
-    Добавьте модель, запустив `<PATH_TO_THIS_REP>/2px4/setup.sh <PATH_TO_PX4>`. Этот скрипт внесет все необходимые изменения в PX4-Autopilot.
+    Добавьте модель, запустив `<PATH_TO_THIS_REP>/setup/setup.sh <PATH_TO_PX4>`. Этот скрипт внесет все необходимые изменения в PX4-Autopilot.
 * Соберите пакет __lars_gazebo_dem__
     ```bash
     cd <PATH_TO_THIS_REP>/lars_gazebo_dem_ws
